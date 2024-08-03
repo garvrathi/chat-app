@@ -2,7 +2,7 @@ import { LuSendHorizonal } from "react-icons/lu";
 
 const Form = () => {
   return (
-    <div className="flex left-[320px] right-0 bottom-[14px] items-center fixed gap-1.5 px-[30px]">
+    <div className="flex left-0 lg:left-[320px] right-0 bottom-[14px] items-center fixed gap-1.5 px-[30px]">
       <input
         type="text"
         name=""

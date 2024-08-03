@@ -1,8 +1,12 @@
 import Image from "next/image";
+import Toggle from "./Toggle";
+import { ToggleProps } from "@/types";
 
-const Nav = () => {
+type PropTypes = ToggleProps;
+
+const Nav = ({ toggleSidebar }: PropTypes) => {
   return (
-    <div className="h-[96px] absolute top-0 left-[320px] right-0 w-[100vw-320px] bg-[#1F1D1D] flex items-center px-4">
+    <nav className="h-[96px] absolute top-0 left-0 lg:left-[320px] right-0 bg-[#1F1D1D] flex items-center justify-between px-4">
       <div className="flex items-center gap-4">
         <div className="w-14 h-14 relative rounded-full overflow-hidden">
           <Image
@@ -19,7 +23,8 @@ const Nav = () => {
           </span>
         </div>
       </div>
-    </div>
+      <Toggle toggleSidebar={toggleSidebar} />
+    </nav>
   );
 };
 

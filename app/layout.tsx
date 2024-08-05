@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import ReduxSetup from "@/store/ReduxSetup";
 
 export const metadata: Metadata = {
   title: "Student-Expert Chat",
@@ -14,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className='bg-[url("/images/bg.jpg")] min-h-screen bg-cover bg-no-repeat bg-black'>
-        {children}
+        <ReduxSetup>{children}</ReduxSetup>
       </body>
     </html>
   );
